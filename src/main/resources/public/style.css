@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+#addEmployee {
+	text-align:left;
+	background-color:#C2F0FF;
+	padding:5px;
+	margin:5px;
+	border:2px solid black;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employees</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/index.js"></script>
+<script src="/create.js"></script>
+
+
+<!-- <script type="text/javascript">
+$.ajax({
+		url: '/employees',
+		method: 'GET'
+	}).then(function(employees) {
+		for(var i = 0; i < employees.length; i++) {
+			console.log(employees[i]);
+		}
+	});
+	
+	
+	var employee = {};
+	employee.firstName = "john";
+	employee.lastName = "doe";
+	
+	$.ajax({
+		url: '/employees',
+		method: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(employee)
+	}).then(
+		function(employees){
+			console.log("Employee added");
+		},
+		function(error){
+			console.log(JSON.stringify(error));
+		}
+	);	
+	
+	
+	
+	
+</script> -->
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="/employee/index">Show Employees</a>
+				</li>
+				<li>
+					<a href="/employee/create">Create Employee</a>
+				</li>
+				<li>
+					<a href="/employee/update">Update Employee</a>
+				</li>
+				<li>
+					<a href="/employee/delete">Delete Employee</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="panel panel-default"> 
+		<div class="panel-heading" id="">Employees</div>
+		<table class="table">
+			<tr>
+				<td>Employee ID</td>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Age</td>
+				<td>IsActive</td>
+			</tr>
+		</table>
+	</div>
+	<div id="addEmployee">
+		<form>
+		Employee ID: <input type="text" name="employeeId">
+		First name: <input type="text" name="firstName">
+		Last name: <input type="text" name="lastName"><br>
+		Age: <input type="text" name="age">
+		 <div class="checkbox">Status: 
+					<label class="checkbox-inline">
+				<input type="checkbox" value="">Active?</label></div>
+		<input type="submit" value="Submit">
+			
+		</form>
+	</div>
+</body>
+</html>
